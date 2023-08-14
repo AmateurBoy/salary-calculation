@@ -1,0 +1,602 @@
+[
+	{
+		"name": "Francis Spears",
+		"joinDate": "2022-08-10",
+		"baseSalary": 10000,
+		"type": "Employee"
+	},
+	{
+		"name": "Macaulay Burris",
+		"joinDate": "2022-08-10",
+		"baseSalary": 10000,
+		"type": "Employee"
+	},
+	{
+		"name": "Brandon Roberson",
+		"joinDate": "2022-08-10",
+		"baseSalary": 10000,
+		"type": "Employee"
+	},
+	{
+		"name": "Mira Newton",
+		"joinDate": "2022-08-10",
+		"baseSalary": 10000,
+		"type": "Manager"
+	},
+	{
+		"name": "Quin Lindsey",
+		"joinDate": "2022-08-10",
+		"baseSalary": 10000,
+		"type": "Manager"
+	},
+	{
+		"name": "Calvin Arnold",
+		"joinDate": "2022-08-10",
+		"baseSalary": 10000,
+		"type": "Manager"
+	},
+	{
+		"name": "Selma Raymond",
+		"joinDate": "2022-08-10",
+		"baseSalary": 10000,
+		"type": "Sales"
+	},
+	{
+		"name": "Karleigh Conrad",
+		"joinDate": "2022-08-10",
+		"baseSalary": 10000,
+		"type": "Sales"
+	},
+	{
+		"name": "Wang Sanford",
+		"joinDate": "2022-08-10",
+		"baseSalary": 10000,
+		"type": "Sales"
+	},
+	{
+		"name": "Jackson Sampson",
+		"joinDate": "2022-08-10",
+		"baseSalary": 10000,
+		"type": "Employee"
+	},
+	{
+		"name": "Blake Emerson",
+		"joinDate": "2022-08-10",
+		"baseSalary": 10000,
+		"type": "Employee"
+	},
+	{
+		"name": "Glenna Montgomery",
+		"joinDate": "2022-08-10",
+		"baseSalary": 10000,
+		"type": "Employee"
+	},
+	{
+		"name": "Raphael Velazquez",
+		"joinDate": "2022-08-10",
+		"baseSalary": 10000,
+		"type": "Manager"
+	},
+	{
+		"name": "Nichole Harmon",
+		"joinDate": "2022-08-10",
+		"baseSalary": 10000,
+		"type": "Manager"
+	},
+	{
+		"name": "Jessica Johnson",
+		"joinDate": "2022-08-10",
+		"baseSalary": 10000,
+		"type": "Manager"
+	},
+	{
+		"name": "Armand Curry",
+		"joinDate": "2022-08-10",
+		"baseSalary": 10000,
+		"type": "Sales"
+	},
+	{
+		"name": "Graham Webb",
+		"joinDate": "2022-08-10",
+		"baseSalary": 10000,
+		"type": "Sales"
+	},
+	{
+		"name": "Desirae Short",
+		"joinDate": "2022-08-10",
+		"baseSalary": 10000,
+		"type": "Sales"
+	},
+	{
+		"name": "Harrison Huffman",
+		"joinDate": "2022-08-10",
+		"baseSalary": 10000,
+		"type": "Employee"
+	},
+	{
+		"name": "Carissa Mcleod",
+		"joinDate": "2022-08-10",
+		"baseSalary": 10000,
+		"type": "Employee"
+	},
+	{
+		"name": "Delilah Woodard",
+		"joinDate": "2022-08-10",
+		"baseSalary": 10000,
+		"type": "Employee"
+	},
+	{
+		"name": "Nerea Arnold",
+		"joinDate": "2022-08-10",
+		"baseSalary": 10000,
+		"type": "Manager"
+	},
+	{
+		"name": "Petra Crane",
+		"joinDate": "2022-08-10",
+		"baseSalary": 10000,
+		"type": "Manager"
+	},
+	{
+		"name": "Jemima Wagner",
+		"joinDate": "2022-08-10",
+		"baseSalary": 10000,
+		"type": "Manager"
+	},
+	{
+		"name": "Louis Fulton",
+		"joinDate": "2022-08-10",
+		"baseSalary": 10000,
+		"type": "Sales"
+	},
+	{
+		"name": "Nigel Castaneda",
+		"joinDate": "2022-08-10",
+		"baseSalary": 10000,
+		"type": "Sales"
+	},
+	{
+		"name": "Damian Humphrey",
+		"joinDate": "2022-08-10",
+		"baseSalary": 10000,
+		"type": "Sales"
+	},
+	{
+		"name": "Caesar Beck",
+		"joinDate": "2022-08-10",
+		"baseSalary": 10000,
+		"type": "Employee"
+	},
+	{
+		"name": "Maggie Jefferson",
+		"joinDate": "2022-08-10",
+		"baseSalary": 10000,
+		"type": "Employee"
+	},
+	{
+		"name": "Katell White",
+		"joinDate": "2022-08-10",
+		"baseSalary": 10000,
+		"type": "Employee"
+	},
+	{
+		"name": "Darius Daugherty",
+		"joinDate": "2022-08-10",
+		"baseSalary": 10000,
+		"type": "Manager"
+	},
+	{
+		"name": "Bernard Cotton",
+		"joinDate": "2022-08-10",
+		"baseSalary": 10000,
+		"type": "Manager"
+	},
+	{
+		"name": "Chandler Thompson",
+		"joinDate": "2022-08-10",
+		"baseSalary": 10000,
+		"type": "Manager"
+	},
+	{
+		"name": "Ainsley Wolf",
+		"joinDate": "2022-08-10",
+		"baseSalary": 10000,
+		"type": "Sales"
+	},
+	{
+		"name": "Demetrius Stafford",
+		"joinDate": "2022-08-10",
+		"baseSalary": 10000,
+		"type": "Sales"
+	},
+	{
+		"name": "Ulla Mcguire",
+		"joinDate": "2022-08-10",
+		"baseSalary": 10000,
+		"type": "Sales"
+	},
+	{
+		"name": "Damian Stout",
+		"joinDate": "2022-08-10",
+		"baseSalary": 10000,
+		"type": "Employee"
+	},
+	{
+		"name": "Ruby Clarke",
+		"joinDate": "2022-08-10",
+		"baseSalary": 10000,
+		"type": "Employee"
+	},
+	{
+		"name": "Maggy Wyatt",
+		"joinDate": "2022-08-10",
+		"baseSalary": 10000,
+		"type": "Employee"
+	},
+	{
+		"name": "Imogene Nguyen",
+		"joinDate": "2022-08-10",
+		"baseSalary": 10000,
+		"type": "Manager"
+	},
+	{
+		"name": "Haviva Dixon",
+		"joinDate": "2022-08-10",
+		"baseSalary": 10000,
+		"type": "Manager"
+	},
+	{
+		"name": "Lyle Dunn",
+		"joinDate": "2022-08-10",
+		"baseSalary": 10000,
+		"type": "Manager"
+	},
+	{
+		"name": "Cyrus Golden",
+		"joinDate": "2022-08-10",
+		"baseSalary": 10000,
+		"type": "Sales"
+	},
+	{
+		"name": "Evelyn Finley",
+		"joinDate": "2022-08-10",
+		"baseSalary": 10000,
+		"type": "Sales"
+	},
+	{
+		"name": "Thane Alvarado",
+		"joinDate": "2022-08-10",
+		"baseSalary": 10000,
+		"type": "Sales"
+	},
+	{
+		"name": "Coby Gill",
+		"joinDate": "2022-08-10",
+		"baseSalary": 10000,
+		"type": "Employee"
+	},
+	{
+		"name": "Daphne Stout",
+		"joinDate": "2022-08-10",
+		"baseSalary": 10000,
+		"type": "Employee"
+	},
+	{
+		"name": "Dolan Calderon",
+		"joinDate": "2022-08-10",
+		"baseSalary": 10000,
+		"type": "Employee"
+	},
+	{
+		"name": "Wesley Ingram",
+		"joinDate": "2022-08-10",
+		"baseSalary": 10000,
+		"type": "Manager"
+	},
+	{
+		"name": "Walker Burks",
+		"joinDate": "2022-08-10",
+		"baseSalary": 10000,
+		"type": "Manager"
+	},
+	{
+		"name": "Jessica Myers",
+		"joinDate": "2022-08-10",
+		"baseSalary": 10000,
+		"type": "Manager"
+	},
+	{
+		"name": "Derek Bass",
+		"joinDate": "2022-08-10",
+		"baseSalary": 10000,
+		"type": "Sales"
+	},
+	{
+		"name": "Stewart Cunningham",
+		"joinDate": "2022-08-10",
+		"baseSalary": 10000,
+		"type": "Sales"
+	},
+	{
+		"name": "Gabriel Bender",
+		"joinDate": "2022-08-10",
+		"baseSalary": 10000,
+		"type": "Sales"
+	},
+	{
+		"name": "Tatum Todd",
+		"joinDate": "2022-08-10",
+		"baseSalary": 10000,
+		"type": "Employee"
+	},
+	{
+		"name": "Leroy Larson",
+		"joinDate": "2022-08-10",
+		"baseSalary": 10000,
+		"type": "Employee"
+	},
+	{
+		"name": "Colin Branch",
+		"joinDate": "2022-08-10",
+		"baseSalary": 10000,
+		"type": "Employee"
+	},
+	{
+		"name": "Cora Kaufman",
+		"joinDate": "2022-08-10",
+		"baseSalary": 10000,
+		"type": "Manager"
+	},
+	{
+		"name": "Hedley Crawford",
+		"joinDate": "2022-08-10",
+		"baseSalary": 10000,
+		"type": "Manager"
+	},
+	{
+		"name": "Alexander Snow",
+		"joinDate": "2022-08-10",
+		"baseSalary": 10000,
+		"type": "Manager"
+	},
+	{
+		"name": "Prescott Cortez",
+		"joinDate": "2022-08-10",
+		"baseSalary": 10000,
+		"type": "Sales"
+	},
+	{
+		"name": "Yuri Schmidt",
+		"joinDate": "2022-08-10",
+		"baseSalary": 10000,
+		"type": "Sales"
+	},
+	{
+		"name": "Quail O'donnell",
+		"joinDate": "2022-08-10",
+		"baseSalary": 10000,
+		"type": "Sales"
+	},
+	{
+		"name": "Alexa Boyle",
+		"joinDate": "2022-08-10",
+		"baseSalary": 10000,
+		"type": "Employee"
+	},
+	{
+		"name": "Amaya Wilcox",
+		"joinDate": "2022-08-10",
+		"baseSalary": 10000,
+		"type": "Employee"
+	},
+	{
+		"name": "Sierra Duncan",
+		"joinDate": "2022-08-10",
+		"baseSalary": 10000,
+		"type": "Employee"
+	},
+	{
+		"name": "Jelani Hickman",
+		"joinDate": "2022-08-10",
+		"baseSalary": 10000,
+		"type": "Manager"
+	},
+	{
+		"name": "Lee Witt",
+		"joinDate": "2022-08-10",
+		"baseSalary": 10000,
+		"type": "Manager"
+	},
+	{
+		"name": "Aidan Nguyen",
+		"joinDate": "2022-08-10",
+		"baseSalary": 10000,
+		"type": "Manager"
+	},
+	{
+		"name": "Keith Solis",
+		"joinDate": "2022-08-10",
+		"baseSalary": 10000,
+		"type": "Sales"
+	},
+	{
+		"name": "Patricia Silva",
+		"joinDate": "2022-08-10",
+		"baseSalary": 10000,
+		"type": "Sales"
+	},
+	{
+		"name": "Armand Mcgee",
+		"joinDate": "2022-08-10",
+		"baseSalary": 10000,
+		"type": "Sales"
+	},
+	{
+		"name": "Lucas Drake",
+		"joinDate": "2022-08-10",
+		"baseSalary": 10000,
+		"type": "Employee"
+	},
+	{
+		"name": "Driscoll Wagner",
+		"joinDate": "2022-08-10",
+		"baseSalary": 10000,
+		"type": "Employee"
+	},
+	{
+		"name": "James Ray",
+		"joinDate": "2022-08-10",
+		"baseSalary": 10000,
+		"type": "Employee"
+	},
+	{
+		"name": "Quinlan Horn",
+		"joinDate": "2022-08-10",
+		"baseSalary": 10000,
+		"type": "Manager"
+	},
+	{
+		"name": "James Sutton",
+		"joinDate": "2022-08-10",
+		"baseSalary": 10000,
+		"type": "Manager"
+	},
+	{
+		"name": "Amaya Langley",
+		"joinDate": "2022-08-10",
+		"baseSalary": 10000,
+		"type": "Manager"
+	},
+	{
+		"name": "Lee Compton",
+		"joinDate": "2022-08-10",
+		"baseSalary": 10000,
+		"type": "Sales"
+	},
+	{
+		"name": "Carolyn Ramirez",
+		"joinDate": "2022-08-10",
+		"baseSalary": 10000,
+		"type": "Sales"
+	},
+	{
+		"name": "Anjolie Nelson",
+		"joinDate": "2022-08-10",
+		"baseSalary": 10000,
+		"type": "Sales"
+	},
+	{
+		"name": "Nasim Mejia",
+		"joinDate": "2022-08-10",
+		"baseSalary": 10000,
+		"type": "Employee"
+	},
+	{
+		"name": "Blossom Franks",
+		"joinDate": "2022-08-10",
+		"baseSalary": 10000,
+		"type": "Employee"
+	},
+	{
+		"name": "Britanney Johnson",
+		"joinDate": "2022-08-10",
+		"baseSalary": 10000,
+		"type": "Employee"
+	},
+	{
+		"name": "Meghan Brown",
+		"joinDate": "2022-08-10",
+		"baseSalary": 10000,
+		"type": "Manager"
+	},
+	{
+		"name": "Nathaniel Grant",
+		"joinDate": "2022-08-10",
+		"baseSalary": 10000,
+		"type": "Manager"
+	},
+	{
+		"name": "Ria Solomon",
+		"joinDate": "2022-08-10",
+		"baseSalary": 10000,
+		"type": "Manager"
+	},
+	{
+		"name": "Gwendolyn Grimes",
+		"joinDate": "2022-08-10",
+		"baseSalary": 10000,
+		"type": "Sales"
+	},
+	{
+		"name": "Tiger Wooten",
+		"joinDate": "2022-08-10",
+		"baseSalary": 10000,
+		"type": "Sales"
+	},
+	{
+		"name": "Xanthus Wade",
+		"joinDate": "2022-08-10",
+		"baseSalary": 10000,
+		"type": "Sales"
+	},
+	{
+		"name": "Troy Harding",
+		"joinDate": "2022-08-10",
+		"baseSalary": 10000,
+		"type": "Employee"
+	},
+	{
+		"name": "Zoe Figueroa",
+		"joinDate": "2022-08-10",
+		"baseSalary": 10000,
+		"type": "Employee"
+	},
+	{
+		"name": "Hall Campbell",
+		"joinDate": "2022-08-10",
+		"baseSalary": 10000,
+		"type": "Employee"
+	},
+	{
+		"name": "Eugenia Powell",
+		"joinDate": "2022-08-10",
+		"baseSalary": 10000,
+		"type": "Manager"
+	},
+	{
+		"name": "Cassandra Callahan",
+		"joinDate": "2022-08-10",
+		"baseSalary": 10000,
+		"type": "Manager"
+	},
+	{
+		"name": "Victor Hubbard",
+		"joinDate": "2022-08-10",
+		"baseSalary": 10000,
+		"type": "Manager"
+	},
+	{
+		"name": "Kamal Alvarado",
+		"joinDate": "2022-08-10",
+		"baseSalary": 10000,
+		"type": "Sales"
+	},
+	{
+		"name": "Jael Simon",
+		"joinDate": "2022-08-10",
+		"baseSalary": 10000,
+		"type": "Sales"
+	},
+	{
+		"name": "Kellie Tyson",
+		"joinDate": "2022-08-10",
+		"baseSalary": 10000,
+		"type": "Sales"
+	},
+	{
+		"name": "Willa Rowe",
+		"joinDate": "2022-08-10",
+		"baseSalary": 10000,
+		"type": "Employee"
+	}
+]
