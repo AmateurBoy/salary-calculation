@@ -50,7 +50,6 @@ src
 ---
 #### Calculate Full
 - **HTTP Method:** GET
-- **Example:**
 - **Query:** `/calculate/full`
 - **Example:**
   - **Query:** `http://localhost:3000/calculate/full`  
