@@ -25,10 +25,4 @@ export class CalculateController {
       await this.calculateService.CalculateAllSalaryEmployee(new Date());
     return resultCalculateSum;
   }
-  @Get('/test/obj/:id')
-  async Test(@Param('id') id: number) {
-    const result =
-      await this.staffMemberService.getStaffMemberWithDeepDependencies(id, 10);
-    return this.calculateService.cutDependencies(result, 0);
-  }
 }

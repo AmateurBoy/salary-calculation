@@ -650,9 +650,8 @@ describe('CalculateService', () => {
       ],
     );
     const currentDate = new Date(2021, 1, 20); //1 Year
-    const mockStaffMembers: StaffMember[] = processEmployee(employee);
-
-    console.log(mockStaffMembers[0].subordinates.length);
+    const mockStaffMembers: StaffMember[] =
+      SplittingIntoOwnDependencies(employee).reverse();
 
     (staffMemberService.getAll as jest.Mock).mockImplementation(() => {
       return mockStaffMembers;
@@ -668,15 +667,18 @@ describe('CalculateService', () => {
     const calculatedSalary = await calculateService.CalculateAllSalaryEmployee(
       currentDate,
     );
-    const expectedSalary = 164853.2829860635;
+
+    const expectedSalary = 164945.9829860635;
     expect(calculatedSalary).toEqual(expectedSalary);
 
-    function processEmployee(employee: StaffMember): StaffMember[] {
+    function SplittingIntoOwnDependencies(
+      employee: StaffMember,
+    ): StaffMember[] {
       const ListObj = [];
       ListObj.push(employee);
       if (employee.subordinates) {
         for (const subordinate of employee.subordinates) {
-          ListObj.push(...processEmployee(subordinate));
+          ListObj.push(...SplittingIntoOwnDependencies(subordinate));
         }
       }
       return ListObj;

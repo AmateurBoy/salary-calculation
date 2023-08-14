@@ -26,23 +26,16 @@ export class CalculateService {
     employee: StaffMember,
     currentDate: Date,
   ): number {
-    return (
-      employee.baseSalary *
-      Math.min(
-        this.EmployeesTypes[employee.type].inOneYear *
-          this.calculateYearsWorked(employee.joinDate, currentDate),
-        this.EmployeesTypes[employee.type].inMaxYear,
-      )
+    const coeff = Math.min(
+      this.EmployeesTypes[employee.type].inOneYear *
+        this.calculateYearsWorked(employee.joinDate, currentDate),
+      this.EmployeesTypes[employee.type].inMaxYear,
     );
+    return employee.baseSalary * coeff;
   }
   private isCorrectType(type: string) {
-    if (!(type in this.EmployeesTypes)) {
-      return false;
-    } else {
-      return true;
-    }
+    return type in this.EmployeesTypes;
   }
-
   public calculateSalary(employee: StaffMember, currentDate: Date) {
     if (!this.isCorrectType(employee.type)) {
       return 0;
@@ -51,15 +44,18 @@ export class CalculateService {
     if (employee.type === 'Manager') {
       this.cutDependencies(employee, 0);
     }
-
+    //We get a bonus to the salary depending on the hours worked.
     const SeniorityBonus = this.calculateSeniorityBonus(employee, currentDate);
+    //We get the sum of all elements taking into account the logic.
     const subordinateSalaries = this.DeepCalculation(employee, currentDate);
+    //Vishchituem bonus to salary depending on subordinates.
     const subordinateBonus =
       subordinateSalaries * this.EmployeesTypes[employee.type].BonusEmployee;
-
-    return employee.baseSalary + SeniorityBonus + subordinateBonus;
+    //The result of the calculations go up.
+    const result = employee.baseSalary + SeniorityBonus + subordinateBonus;
+    return result;
   }
-  //Метод подсчета количестав проработыных лет.
+  //Method of calculating the number of years worked.
   public calculateYearsWorked(joinDateObj: Date, currentDate: Date): number {
     let joinDate = new Date();
     try {
@@ -91,7 +87,7 @@ export class CalculateService {
   }
   private DeepCalculation(employee: StaffMember, currentDate: Date) {
     let subordinateSalaries = 0;
-    if (employee.subordinates !== null && employee.subordinates !== undefined) {
+    if (employee.subordinates) {
       subordinateSalaries = employee.subordinates.reduce(
         (sum, subordinate) =>
           sum + this.calculateSalary(subordinate, currentDate),
@@ -100,7 +96,7 @@ export class CalculateService {
     }
     return subordinateSalaries;
   }
-  //Метод для обрезки зависимостей у менеджера
+  //Method for trimming dependencies in the manager (0 is the 1st level of nesting.)
   public cutDependencies(employee: StaffMember, lvlCup: number) {
     if (employee.subordinates && lvlCup >= 0) {
       for (const empl of employee.subordinates) {
@@ -115,7 +111,7 @@ export class CalculateService {
     return employee;
   }
   public async CalculateAllSalaryEmployee(currentDate: Date) {
-    //получить всех роботников без вложености.
+    //receive all employee without nesting.(Necessary to get all id's).
     const AllMember = await this.staffMemberService.getAll();
     let resultSum = 0;
     for (const member of AllMember) {
@@ -124,6 +120,7 @@ export class CalculateService {
           member.id,
           10,
         );
+      //Produce a calculation for each employee.
       const resultMember = this.calculateSalary(memberDependencie, currentDate);
       resultSum += resultMember;
     }
