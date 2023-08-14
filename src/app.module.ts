@@ -9,17 +9,14 @@ import * as dotenv from 'dotenv';
 
 dotenv.config();
 
+const DBModule = TypeOrmModule.forRoot({
+  type: 'sqlite',
+  database: join(__dirname, '..', process.env.DATABASE_PATH),
+  entities: [StaffMember],
+  synchronize: true,
+});
+
 @Module({
-  imports: [
-    TypeOrmModule.forRoot({
-      type: 'sqlite',
-      database: join(__dirname, '..', process.env.DATABASE_PATH),
-      entities: [StaffMember],
-      synchronize: true,
-    }),
-    StaffMemberModule,
-    GenerationModule,
-    CalculateModule,
-  ],
+  imports: [DBModule, StaffMemberModule, GenerationModule, CalculateModule],
 })
 export class AppModule {}
