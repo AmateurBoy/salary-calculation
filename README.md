@@ -39,6 +39,9 @@ src
 ```
 
 ## Endpoints
+*All other API documentation in Swagger
+**Query:** `http://localhost:3000/api`
+
 ### Core Endpoints (Calculate)
 
 #### Calculate by ID
