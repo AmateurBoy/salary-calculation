@@ -1,6 +1,7 @@
 import { Controller, Get } from '@nestjs/common';
 import { GenerationService } from './generation.service';
 import { StaffMemberService } from 'modules/staff-member/staffMember.service';
+import { join } from 'path';
 
 @Controller('generator')
 export class GeneratorController {
@@ -12,14 +13,14 @@ export class GeneratorController {
   @Get('/data')
   async generation() {
     const IsGeneration = this.generationService.isReadJsonFileTheSuccess(
-      'C:/Users/march/Downloads/data-test-100-1y.json',
+      join(__dirname, '..', process.env.DATA_FILE),
     );
     if (IsGeneration) {
       return this.staffMemberService.createMany(
         this.generationService.staffMembers,
       );
     } else {
-      return 'Generation failed';
+      return 'Generation failed [ File not reading ]';
     }
   }
   @Get('/DI')

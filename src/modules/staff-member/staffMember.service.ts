@@ -33,6 +33,7 @@ export class StaffMemberService {
   async getAllFiltr(typeParams: any) {
     const query = this.staffMemberRepository.createQueryBuilder('staffMember');
 
+    //Next comes the sorting criteria.
     if (typeParams.type) {
       query.andWhere('staffMember.type = :type', { type: typeParams.type });
     }
@@ -46,7 +47,6 @@ export class StaffMemberService {
       query.take(typeParams.count);
     }
 
-    // Добавьте другие параметры фильтрации по вашим требованиям
     return query.getMany();
   }
   async getStaffMemberWithDeepDependencies(

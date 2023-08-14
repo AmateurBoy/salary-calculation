@@ -5,7 +5,8 @@ import * as fs from 'fs';
 @Injectable()
 export class GenerationService {
   public staffMembers: StaffMember[] = [];
-
+  //Get the path to the file and check for JSON data in it, if the file
+  //is available for reading it writes the data to the staffMembers variable and returns true
   public isReadJsonFileTheSuccess(path: string) {
     try {
       const jsonString = fs.readFileSync(path, 'utf8');
@@ -15,30 +16,29 @@ export class GenerationService {
       return false;
     }
   }
+  //A randomized robot linkage generator. Requires additional checks for consistency.
   async dependencyGeneration(data: StaffMember[]) {
     const staffMembers = data;
-    //Перемешиваем.
+    //Stir.
     const shuffledMembers = this.shuffleArray(staffMembers);
-    //Бежим по перемешеному масиву.
-    /*Условия и логика
-      1.Employee - не может иметь подчененых.
-      2.Тот кого я присваеваю в свое подченение не являеться ли у него в подченеии 
-      мой начальник.(Необходимпо пробежаться по всей вложености зависимостей начальников) 
-      3.Колисество подчененых у одного роботника выбераеться рандомно в диапазоне. от 1-5.
-
+    //Run through the jumbled array.
+    /*Conditions and logic
+      1.Employee - cannot have subordinates.
+      2.The one I assign to my subordinate is not my boss. 
+      my supervisor. (It is necessary to run through the whole nesting of dependencies of supervisors). 
+      3.The number of subordinates of one robot is chosen randomly in the range from 1-5.
     */
     for (const member of shuffledMembers) {
       if (member.type !== 'Employee') {
-        //Количество генерируемых роботников в подченение.
+        //Number of robots generated per subordinate.
         const countMember = this.getRandomInt(1, 5);
-        //Реализация доавления в подченение.
+        //Realization of doation to subordination.
         for (let i = 0; i < countMember; i++) {
           const freeWorker = this.getFreeEmployee(shuffledMembers);
           const IsNotNullObject = freeWorker ? true : false;
           if (!IsNotNullObject) {
             continue;
           }
-          console.log(`${member.id} => ${member}`);
           const IsCorrectMerge = this.isHiringSafe(member, freeWorker);
 
           let isNotDublicat = false;
@@ -46,13 +46,13 @@ export class GenerationService {
             isNotDublicat = freeWorker.id != member.id;
           }
           if (IsCorrectMerge && IsNotNullObject && isNotDublicat) {
-            //Слияние свободного роботника с начальником.
+            //The merger of the free laborer with the boss.
             member.subordinates = member.subordinates ?? [];
-            //Создание чистого обекта и заполнения его id - избегание JSON цикличности.
+            //Creating a clean object and filling it with id - avoiding JSON looping.
             const memberDTO = new StaffMember();
             memberDTO.id = member.id;
             freeWorker.supervisor = memberDTO;
-            //Создание чистого обекта и заполнения его id - избегание JSON цикличности.
+            //Creating a clean object and filling it with id - avoiding JSON looping.
             const freeDTO = new StaffMember();
             freeDTO.id = freeWorker.id;
             member.subordinates.push(freeDTO);
@@ -62,28 +62,28 @@ export class GenerationService {
     }
     return shuffledMembers;
   }
+  //Returns a free worker
   private getFreeEmployee(arrMember: StaffMember[]) {
     const resultArr = arrMember.filter(
       (member) => member.supervisor === null || member.supervisor === undefined,
     );
     return resultArr[this.getRandomInt(0, resultArr.length)];
   }
-
+  //It's now method for testing for looping.
   private isHiringSafe(employee: StaffMember, newHire: StaffMember): boolean {
     const visited = new Set<number>();
 
     function checkSupervisors(emp: StaffMember): boolean {
-      console.log(`${emp.name}|${emp.id}`);
       if (emp) {
         if (visited.has(emp.id)) {
-          return false; // Циклическая зависимость
+          return false; // Cyclic dependence
         }
 
         visited.add(emp.id);
 
         if (emp.supervisor) {
           if (emp.supervisor.id === newHire.id) {
-            return false; // Новый найм не может быть начальником текущего сотрудника
+            return false; // A new hire cannot be the current employee's supervisor
           }
           return checkSupervisors(emp.supervisor);
         }
@@ -95,36 +95,7 @@ export class GenerationService {
 
     return checkSupervisors(employee);
   }
-
-  /*
-  private checkForCyclicDependency(
-    thisEmployee: StaffMember,
-    employee: StaffMember,
-    visited: Set<number> = new Set(),
-  ): boolean {
-    if (thisEmployee && employee) {
-      if (thisEmployee.id === employee.id) {
-        return true; // Циклическая зависимость найдена
-      }
-
-      if (visited.has(thisEmployee.id)) {
-        return false; // Уже посетили этого сотрудника, нет циклической зависимости
-      }
-
-      visited.add(thisEmployee.id);
-
-      if (thisEmployee.subordinates) {
-        for (const subordinate of thisEmployee.subordinates) {
-          if (this.checkForCyclicDependency(subordinate, employee, visited)) {
-            return true;
-          }
-        }
-      }
-    }
-
-    return false;
-  }
-  /*
+  //It's an old method for testing for looping.
   private checkforCyclicDependency(
     thisEmployee: StaffMember,
     employee: StaffMember,
@@ -139,7 +110,7 @@ export class GenerationService {
     }
     return true;
   }
-*/
+  //array mixing
   private shuffleArray(array: any[]): StaffMember[] {
     const shuffled = [...array];
     for (let i = shuffled.length - 1; i > 0; i--) {
@@ -148,6 +119,7 @@ export class GenerationService {
     }
     return shuffled;
   }
+  //Getting a random number in a range.
   public getRandomInt(min: number, max: number): number {
     return Math.floor(Math.random() * (max - min + 1)) + min;
   }
